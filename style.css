@@ -707,7 +707,7 @@ body{
 
 .top-notice{
     position: sticky;
-    top: 80px; /* Navbar ki height ke hisab se adjust karna */
+    top: 100px; /* Navbar ki height ke hisab se adjust karna */
     z-index: 999;
     width: 100%;
     background: #FFE4EF;
