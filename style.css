@@ -707,13 +707,13 @@ body{
 
 .top-notice{
     position: sticky;
-    top: 100px; /* Navbar ki height ke hisab se adjust karna */
+    top: 100px;
     z-index: 999;
     width: 100%;
     background: #FFE4EF;
     color: #D96C97;
     text-align: center;
-    padding: 10px 15px;
+    padding: 20px 15px;
     font-size: 15px;
     font-weight: 700;
     border-bottom: 2px solid #F8BBD0;
