@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Bigmi Finds</title>
+    <meta name="description" content="Bigmi Finds offers cute girls accessories, stationery, hampers, and beauty essentials at affordable prices with Pan India shipping.">
+
+<meta name="keywords" content="Bigmi Finds, Girls Accessories, Stationery, Hampers, Beauty Essentials, Cute Gifts, Online Shopping India">
+
+<meta name="author" content="Bigmi Finds">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">BIGMI FINDS</a>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">🛒 Cart</a></li>
+    </ul>
+</nav>
+
+<section class="checkout-page">
+
+<h1>Checkout 💖</h1>
+
+<form class="checkout-form" id="checkout-form">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="email" placeholder="Email (Optional)">
+
+<input type="text" placeholder="City" required>
+
+<input type="text" placeholder="State" required>
+
+<textarea placeholder="Delivery Address" required></textarea>
+
+<input type="text" placeholder="PIN Code" required>
+<textarea placeholder="Special Instructions (Optional)"></textarea>
+<label>Select Payment Method</label>
+
+<select id="payment-method" required>
+    <option value="">Select Payment Method</option>
+    <option value="cod">Cash on Delivery (₹9 Shipping)</option>
+    <option value="upi">UPI Payment (Free Shipping)</option>
+</select>
+
+<div id="upi-section" style="display:none;">
+    <h3>Scan & Pay</h3>
+
+    <img src="images/upi-qr.jpg.jpeg" alt="UPI QR">
+
+    <p><strong>UPI ID:</strong> 8917334400@ybl</p>
+</div>
+
+
+<div class="order-summary">
+
+<h2>Order Summary</h2>
+
+<p>Total : ₹<span id="checkout-total">0</span></p>
+
+<p>Shipping : <span id="shipping-charge">9</span></p>
+
+<h3>Grand Total : ₹<span id="grand-total">0</span></h3>
+
+</div>
+
+<button type="submit" id="place-order">
+    Place Order
+</button>
+</form>
+
+</section>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let total = 0;
+
+cart.forEach(item => {
+    total += item.price * item.quantity;
+});
+
+document.getElementById("checkout-total").innerText = total;
+
+let payment = document.getElementById("payment-method");
+
+function updateTotal() {
+
+    let shipping = payment.value === "cod" ? 9 : 0;
+
+    document.getElementById("shipping-charge").innerText =
+        shipping === 0 ? "FREE" : shipping;
+
+    document.getElementById("grand-total").innerText =
+        total + shipping;
+}
+
+payment.addEventListener("change", updateTotal);
+
+updateTotal();
+</script>
+<footer>
+
+<h2>BIGMI FINDS</h2>
+
+<p>Big Smiles in Mini Things 💖</p>
+
+<p>© 2026 Bigmi Finds. All Rights Reserved.</p>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
