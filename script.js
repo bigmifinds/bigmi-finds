@@ -212,12 +212,12 @@ function removeItem(index){
 // ================= CHECKOUT =================
 
 const paymentMethod = document.getElementById("payment-method");
-const upiSection = document.getElementById("upi-section");
-const checkoutTotal = document.getElementById("checkout-total");
-const shippingCharge = document.getElementById("shipping-charge");
-const grandTotal = document.getElementById("grand-total");
+if (paymentMethod) {
 
-if (paymentMethod && checkoutTotal && grandTotal) {
+    const upiSection = document.getElementById("upi-section");
+    const checkoutTotal = document.getElementById("checkout-total");
+    const shippingCharge = document.getElementById("shipping-charge");
+    const grandTotal = document.getElementById("grand-total");
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -372,5 +372,4 @@ if (placeOrderBtn) {
   });
 
 }
-
 

@@ -2320,3 +2320,22 @@ button{
     object-fit:cover;
     border-radius:12px;
 }
+
+.payment-confirm-box{
+    margin-top: 15px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.payment-confirm-box label{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.payment-confirm-box input{
+    margin-top: 4px;
+    transform: scale(1.2);
+}
