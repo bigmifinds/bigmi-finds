@@ -53,7 +53,7 @@
 <select id="payment-method" required>
     <option value="">Select Payment Method</option>
     <option value="cod">Cash on Delivery (₹9 Shipping)</option>
-    <option value="upi">UPI Payment (Free Shipping)</option>
+    <option value="upi">UPI Payment</option>
 </select>
 
 <div id="upi-section" style="display:none;">
@@ -64,27 +64,6 @@
     <p><strong>UPI ID:</strong> 8917334400@ybl</p>
 </div>
 
-<div class="payment-confirm-box">
-
-    <label>
-        <input type="checkbox" id="cod-confirm">
-        I confirm that I have selected Cash on Delivery (COD). I understand that a ₹9 COD charge will be applied and I will pay the total amount at the time of delivery.
-    </label>
-
-</div>
-
-<h4>OR</h4>
-
-<div class="payment-confirm-box">
-
-    <label>
-        <input type="checkbox" id="upi-confirm">
-        I confirm that I have completed the UPI payment. My order will be processed only after payment verification. If the payment is not received, the order will not be confirmed.
-    </label>
-
-</div>
-
-
 <div class="order-summary">
 
 <h2>Order Summary</h2>
@@ -92,7 +71,7 @@
 <p>Total : ₹<span id="checkout-total">0</span></p>
 
 
-<p>Shipping : <span id="shipping-charge">9</span></p>
+<p>Shipping :<span id="shipping-charge">0</span></p>
 
 <h3>Grand Total : ₹<span id="grand-total">0</span></h3>
 
@@ -105,34 +84,6 @@
 
 </section>
 
-<script>
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-let total = 0;
-
-cart.forEach(item => {
-    total += item.price * item.quantity;
-});
-
-document.getElementById("checkout-total").innerText = total;
-
-let payment = document.getElementById("payment-method");
-
-function updateTotal() {
-
-    let shipping = payment.value === "cod" ? 9 : 0;
-
-    document.getElementById("shipping-charge").innerText =
-        shipping === 0 ? "FREE" : shipping;
-
-    document.getElementById("grand-total").innerText =
-        total + shipping;
-}
-
-payment.addEventListener("change", updateTotal);
-
-updateTotal();
-</script>
 <footer>
 
 <h2>BIGMI FINDS</h2>

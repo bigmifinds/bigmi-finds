@@ -212,53 +212,113 @@ function removeItem(index){
 // ================= CHECKOUT =================
 
 const paymentMethod = document.getElementById("payment-method");
-if (paymentMethod) {
+const cityInput = document.querySelector('input[placeholder="City"]');
 
-    const upiSection = document.getElementById("upi-section");
-    const checkoutTotal = document.getElementById("checkout-total");
-    const shippingCharge = document.getElementById("shipping-charge");
-    const grandTotal = document.getElementById("grand-total");
+const upiSection = document.getElementById("upi-section");
+const checkoutTotal = document.getElementById("checkout-total");
+const shippingCharge = document.getElementById("shipping-charge");
+function updateShipping(){
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let city = cityInput.value.toLowerCase().trim();
 
-    let total = 0;
+    if(paymentMethod.value === "cod" &&
+       (city === "berhampur" || city === "brahmapur")){
 
-    cart.forEach(item => {
-        total += Number(item.price || 0);
-    });
+        shippingCharge.innerText = "₹9";
+        grandTotal.innerText = total + 9;
 
-    checkoutTotal.innerText = total;
-    let shipping = 9;
-    grandTotal.innerText = total + shipping;
+    }
+    else{
+
+        shippingCharge.innerText = "FREE";
+        grandTotal.innerText = total;
+
+    }
+
+}
+const grandTotal = document.getElementById("grand-total");
+
+const codOption = document.querySelector('option[value="cod"]');
+cityInput.addEventListener("input", function(){
+
+    let city = this.value.toLowerCase().trim();
+
+    if(city === "berhampur" || city === "brahmapur"){
+
+        codOption.style.display = "block";
+
+    }else{
+
+        codOption.style.display = "none";
+
+        if(paymentMethod.value === "cod"){
+            paymentMethod.value = "upi";
+        }
+
+    }
+
+});
 
 
 
-    paymentMethod.addEventListener("change", function () {
-        
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        if (this.value === "cod") {
+let total = 0;
 
+let groupedCart = {};
+
+cart.forEach(product => {
+
+    if(groupedCart[product.name]){
+        groupedCart[product.name].quantity++;
+    }else{
+        groupedCart[product.name] = {
+            ...product,
+            quantity:1
+        };
+    }
+
+});
+
+
+Object.values(groupedCart).forEach(product => {
+
+    total += product.price * product.quantity;
+
+});
+
+
+checkoutTotal.innerText = total;
+grandTotal.innerText = total;
+
+paymentMethod.addEventListener("change", function () {
+
+    if(this.value === "cod"){
+
+        if(upiSection){
+
+       
             upiSection.style.display = "none";
+        }
 
-            shippingCharge.innerText = "₹9";
+        shippingCharge.innerText = "₹9";
+        grandTotal.innerText = total + 9;
+    }
 
-            grandTotal.innerText = total + 9;
 
-        } else if (this.value === "upi") {
+    else if(this.value === "upi"){
 
+         if(upiSection){
+
+        
             upiSection.style.display = "block";
-
-            shippingCharge.innerText = "FREE";
-
-            grandTotal.innerText = total;
+         }
+         shippingCharge.innerText = "FREE";
+        grandTotal.innerText = total;
 
         }
 
-    });
-
-}
-
-
+});
 
 
 // ================= GOOGLE SHEET ORDER =================
