@@ -2340,23 +2340,25 @@ button{
     transform: scale(1.2);
 }
 
-.gift-box{
+.free-gift-box{
 
-text-align:center;
+max-width:380px;
 
-margin-top:40px;
+margin:35px auto;
 
 padding:25px;
+
+text-align:center;
 
 background:#fff7fb;
 
 border-radius:20px;
 
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+box-shadow:0 4px 15px rgba(0,0,0,.08);
 
 }
 
-.gift-box h2{
+.free-gift-box h2{
 
 color:#ff4f8b;
 
@@ -2364,72 +2366,39 @@ margin-bottom:10px;
 
 }
 
-.gift-box p{
+.free-gift-box p{
 
 color:#666;
 
-font-size:15px;
-
 }
 
-.mystery-box{
+.gift-card{
 
-margin:25px auto;
+margin-top:20px;
 
-width:280px;
+padding:20px;
 
-height:170px;
+background:#ffe8f1;
 
-background:linear-gradient(135deg,#ffd6e7,#ffeef6);
-
-border:3px dashed #ff7cab;
+border:2px dashed #ff8db6;
 
 border-radius:18px;
 
-display:flex;
+}
 
-justify-content:center;
+.gift-icon{
 
-align-items:center;
+font-size:45px;
 
-padding:15px;
-
-font-weight:bold;
-
-font-size:18px;
-
-color:#444;
+margin-bottom:10px;
 
 }
 
-#reveal-btn{
+.gift-card h3{
 
-margin-top:15px;
+color:#ff2d74;
 
-background:#ff4f8b;
-
-color:white;
-
-padding:14px 28px;
-
-border:none;
-
-border-radius:30px;
-
-font-size:16px;
-
-font-weight:700;
-
-cursor:pointer;
-
-transition:.3s;
+margin-bottom:10px;
 
 }
 
-#reveal-btn:hover{
-
-transform:scale(1.05);
-
-background:#ff2d74;
-
-}
