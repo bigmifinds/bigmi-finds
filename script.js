@@ -405,6 +405,7 @@ if(revealBtn){
 revealBtn.onclick=function(){
 
 const gift=gifts[Math.floor(Math.random()*gifts.length)];
+localStorage.setItem("freeGift", gift);
 
 giftResult.innerHTML=`
 
