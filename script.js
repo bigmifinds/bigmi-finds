@@ -231,56 +231,7 @@ if (paymentMethod) {
     let shipping = 9;
     grandTotal.innerText = total + shipping;
 
-    let discount = 0;
 
-      const couponInput = document.getElementById("coupon-code");
-      const applyCouponBtn = document.getElementById("apply-coupon");
-      const couponMessage = document.getElementById("coupon-message");
-      const discountAmount = document.getElementById("discount-amount");
-
-      if (applyCouponBtn) {
-
-    applyCouponBtn.addEventListener("click", () => {
-
-        const code = couponInput.value.trim().toUpperCase();
-
-        if (code === "BIGMIFINDS") {
-
-            if (total >= 199) {
-
-                discount = 11;
-
-                couponMessage.innerHTML = "✅ Coupon Applied Successfully!";
-
-                discountAmount.innerText = "₹11";
-
-            } else {
-
-                discount = 0;
-
-                couponMessage.innerHTML = "⚠ Minimum order ₹199 required.";
-
-                discountAmount.innerText = "₹0";
-
-            }
-
-        } else {
-
-            discount = 0;
-
-            couponMessage.innerHTML = "❌ Invalid Coupon Code";
-
-            discountAmount.innerText = "₹0";
-
-        }
-
-        let shipping = paymentMethod.value === "cod" ? 9 : 0;
-
-        grandTotal.innerText = total + shipping - discount;
-
-    });
-
-}
 
     paymentMethod.addEventListener("change", function () {
         
