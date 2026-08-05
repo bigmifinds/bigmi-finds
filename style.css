@@ -2339,3 +2339,97 @@ button{
     margin-top: 4px;
     transform: scale(1.2);
 }
+
+.gift-box{
+
+text-align:center;
+
+margin-top:40px;
+
+padding:25px;
+
+background:#fff7fb;
+
+border-radius:20px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.gift-box h2{
+
+color:#ff4f8b;
+
+margin-bottom:10px;
+
+}
+
+.gift-box p{
+
+color:#666;
+
+font-size:15px;
+
+}
+
+.mystery-box{
+
+margin:25px auto;
+
+width:280px;
+
+height:170px;
+
+background:linear-gradient(135deg,#ffd6e7,#ffeef6);
+
+border:3px dashed #ff7cab;
+
+border-radius:18px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:15px;
+
+font-weight:bold;
+
+font-size:18px;
+
+color:#444;
+
+}
+
+#reveal-btn{
+
+margin-top:15px;
+
+background:#ff4f8b;
+
+color:white;
+
+padding:14px 28px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#reveal-btn:hover{
+
+transform:scale(1.05);
+
+background:#ff2d74;
+
+}
