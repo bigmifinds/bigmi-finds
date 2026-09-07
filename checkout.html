@@ -1,98 +1,559 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Checkout | Bigmi Finds</title>
-    <meta name="description" content="Bigmi Finds offers cute girls accessories, stationery, hampers, and beauty essentials at affordable prices with Pan India shipping.">
 
-<meta name="keywords" content="Bigmi Finds, Girls Accessories, Stationery, Hampers, Beauty Essentials, Cute Gifts, Online Shopping India">
-
-<meta name="author" content="Bigmi Finds">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html">BIGMI FINDS</a>
+    <!-- TOP NOTICE -->
+
+    <div class="top-notice">
+        🛍️ Minimum Order ₹199
+        &nbsp; • &nbsp;
+        🚚 Free Shipping on Orders ₹499+
     </div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cart.html">🛒 Cart</a></li>
-    </ul>
-</nav>
 
-<section class="checkout-page">
+    <!-- HEADER -->
 
-<h1>Checkout 💖</h1>
+    <header class="site-header">
 
-<form class="checkout-form" id="checkout-form">
+        <div class="brand">
 
-<input type="text" placeholder="Full Name" required>
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpg" alt="Bigmi Finds Logo">
+            </a>
 
-<input type="tel" placeholder="Phone Number" required>
+            <a href="index.html" class="brand-name">
+                Bigmi Finds
+            </a>
 
-<input type="email" placeholder="Email (Optional)">
-
-<input type="text" placeholder="City" required>
-
-<input type="text" placeholder="State" required>
-
-<textarea placeholder="Delivery Address" required></textarea>
-
-<input type="text" placeholder="PIN Code" required>
-<textarea placeholder="Special Instructions (Optional)"></textarea>
-
-<label>Select Payment Method</label>
-
-<select id="payment-method" required>
-    <option value="">Select Payment Method</option>
-    <option value="cod">Cash on Delivery (₹9 Shipping)</option>
-    <option value="upi">UPI Payment</option>
-</select>
-
-<div id="upi-section" style="display:none;">
-    <h3>Scan & Pay</h3>
-
-    <img src="images/upi-qr.jpg.jpeg" alt="UPI QR">
-
-    <p><strong>UPI ID:</strong> 8917334400@ybl</p>
-</div>
-
-<div class="order-summary">
-
-<h2>Order Summary</h2>
-
-<p>Total : ₹<span id="checkout-total">0</span></p>
+        </div>
 
 
-<p>Shipping :<span id="shipping-charge">0</span></p>
+        <nav class="main-nav">
 
-<h3>Grand Total : ₹<span id="grand-total">0</span></h3>
+            <a href="index.html">
+                Home
+            </a>
 
-</div>
+            <a href="products.html">
+                Shop
+            </a>
 
-<button type="submit" id="place-order">
-    Place Order
-</button>
-</form>
+            <a href="index.html#about">
+                About
+            </a>
 
-</section>
+        </nav>
 
-<footer>
 
-<h2>BIGMI FINDS</h2>
+        <a href="cart.html" class="cart-link">
 
-<p>Big Smiles in Mini Things 💖</p>
+            🛒 Cart
 
-<p>© 2026 Bigmi Finds. All Rights Reserved.</p>
+            <span id="cart-count">0</span>
 
-</footer>
-<script src="script.js"></script>
+        </a>
+
+    </header>
+
+
+
+    <!-- CHECKOUT -->
+
+    <main>
+
+        <section class="checkout-page">
+
+            <!-- CHECKOUT HEADER -->
+
+            <div class="checkout-header">
+
+                <p class="welcome-text">
+                    BIGMI FINDS
+                </p>
+
+                <h1>
+                    Checkout ✨
+                </h1>
+
+                <p>
+                    Just a few details and your order is ready.
+                </p>
+
+            </div>
+
+
+
+            <div class="checkout-container">
+
+
+                <!-- CUSTOMER DETAILS -->
+
+                <section class="checkout-card">
+
+                    <h2>
+                        Delivery Details 📦
+                    </h2>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-name">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customer-name"
+                            name="customer_name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-phone">
+                            Mobile Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customer-phone"
+                            name="customer_phone"
+                            placeholder="Enter your mobile number"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="customer-email"
+                            name="customer_email"
+                            placeholder="Enter your email address"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-address">
+                            Complete Address *
+                        </label>
+
+                        <textarea
+                            id="customer-address"
+                            name="customer_address"
+                            rows="4"
+                            placeholder="House / Flat No., Street, Area"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="customer-city">
+                                City *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customer-city"
+                                name="customer_city"
+                                placeholder="City"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customer-state">
+                                State *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customer-state"
+                                name="customer_state"
+                                placeholder="State"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-pincode">
+                            PIN Code *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customer-pincode"
+                            name="customer_pincode"
+                            placeholder="Enter 6-digit PIN code"
+                            maxlength="6"
+                            required
+                        >
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- PAYMENT -->
+
+                
+
+                <section class="checkout-card payment-card">
+
+                 <h2>
+                   Payment Method 💳
+                 </h2>
+
+                 <p class="payment-note">
+                     Select your preferred payment method.
+                 </p>
+
+
+                 <div class="payment-options">
+
+
+                  <!-- PREPAID -->
+
+                   <label class="payment-option">
+
+                  <input
+                type="radio"
+                name="payment_method"
+                value="prepaid"
+                id="prepaid-payment"
+                checked
+            >
+
+            <div>
+
+                <strong>
+                    Prepaid
+                </strong>
+
+                <span>
+                    Pay securely using UPI
+                </span>
+
+            </div>
+
+        </label>
+
+
+        <!-- COD -->
+
+        <label
+            class="payment-option cod-option"
+            id="cod-option"
+        >
+
+            <input
+                type="radio"
+                name="payment_method"
+                value="cod"
+                id="cod-payment"
+            >
+
+            <div>
+
+                <strong>
+                    Cash on Delivery
+                </strong>
+
+                <span>
+                    Available only for Berhampur
+                </span>
+
+            </div>
+
+        </label>
+
+
+    </div>
+
+
+
+    <!-- PREPAID PAYMENT DETAILS -->
+
+    <div
+        class="prepaid-payment-box"
+        id="prepaid-payment-box"
+    >
+
+        <div class="payment-box-heading">
+
+            <h3>
+                Complete Your Payment
+            </h3>
+
+            <p>
+                Pay using the UPI details below and upload your payment screenshot.
+            </p>
+
+        </div>
+
+
+        <!-- UPI DETAILS -->
+
+        <div class="upi-details">
+
+            <p>
+                <strong>UPI ID:</strong>
+                <span id="upi-id">
+                    8917334400@ybl
+                </span>
+            </p>
+
+        </div>
+
+
+        <!-- QR CODE -->
+
+        <div class="upi-qr-box">
+
+            <p>
+                Scan to Pay
+            </p>
+
+            <img
+                src="images/upi-qr.jpeg"
+                alt="Bigmi Finds UPI QR Code"
+                class="upi-qr"
+            >
+
+        </div>
+
+
+        <!-- PAYMENT SCREENSHOT -->
+
+        <div class="payment-upload">
+
+            <label for="payment-screenshot">
+                Upload Payment Screenshot *
+            </label>
+
+            <input
+                type="file"
+                id="payment-screenshot"
+                name="payment_screenshot"
+                accept="image/png, image/jpeg, image/jpg"
+            >
+
+            <p>
+                Please upload a clear screenshot after completing your payment.
+            </p>
+
+        </div>
+
+    </div>
+
+            </section>
+
+
+
+                <!-- ORDER SUMMARY -->
+
+                <section class="checkout-card checkout-summary">
+
+                    <h2>
+                        Your Order 🛍️
+                    </h2>
+
+
+                    <div id="checkout-items">
+
+                        <!-- Cart products will appear here -->
+
+                    </div>
+
+
+                    <div class="checkout-summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="checkout-subtotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="checkout-summary-row">
+
+                        <span>
+                            Shipping
+                        </span>
+
+                        <strong id="checkout-shipping">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="checkout-divider"></div>
+
+
+                    <div class="checkout-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="checkout-total">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- TERMS -->
+
+                <section class="checkout-card checkout-terms">
+
+                    <label class="terms-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="agree-terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="terms.html">
+                                Terms & Conditions
+                            </a>
+                            and
+                            <a href="return.html">
+                                Return & Exchange Policy
+                            </a>.
+                        </span>
+
+                    </label>
+
+                </section>
+
+
+
+                <!-- PLACE ORDER -->
+
+                <button
+                    type="button"
+                    class="place-order-button"
+                    id="place-order-button"
+                >
+                    Place Order 💗
+                </button>
+
+
+                <a
+                    href="cart.html"
+                    class="back-to-cart"
+                >
+                    ← Back to Cart
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <h3>
+                Bigmi Finds
+            </h3>
+
+            <p>
+                Big Smiles, Mini Things ♡
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="shipping.html">
+                Shipping
+            </a>
+
+            <a href="return.html">
+                Returns
+            </a>
+
+            <a href="terms.html">
+                Terms
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Bigmi Finds. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

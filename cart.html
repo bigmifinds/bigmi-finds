@@ -2,80 +2,257 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart | Bigmi Finds</title>
-    <meta name="description" content="Bigmi Finds offers cute girls accessories, stationery, hampers, and beauty essentials at affordable prices with Pan India shipping.">
 
-<meta name="keywords" content="Bigmi Finds, Girls Accessories, Stationery, Hampers, Beauty Essentials, Cute Gifts, Online Shopping India">
+    <title>Your Cart | Bigmi Finds</title>
 
-<meta name="author" content="Bigmi Finds">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html">BIGMI FINDS</a>
+    <!-- TOP NOTICE -->
+
+    <div class="top-notice">
+    🛍️ Minimum Order ₹199 &nbsp; • &nbsp; 🚚 Free Shipping on Orders ₹499+
     </div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="girls-accessories.html">Girls Accessories</a></li>
-        <li><a href="stationery.html">Stationery</a></li>
-        <li><a href="hampers.html">Hampers</a></li>
-    </ul>
-</nav>
 
-<section class="cart-page">
+    <!-- HEADER -->
 
-<h1>🛒 My Cart</h1>
+    <header class="site-header">
 
-<div id="empty-cart">
+        <div class="brand">
 
-    <h2>Your cart is empty</h2>
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpg" alt="Bigmi Finds Logo">
+            </a>
 
-    <p>Add products to start shopping.</p>
+            <a href="index.html" class="brand-name">
+                Bigmi Finds
+            </a>
 
-    <a href="index.html" class="shop-btn">Start Shopping</a>
+        </div>
 
-</div>
 
-<div id="cart-container">
+        <nav class="main-nav">
 
-    <div id="cart-items"></div>
+            <a href="index.html">
+                Home
+            </a>
 
-    <div class="cart-summary">
+            <a href="products.html">
+                Shop
+            </a>
 
-        <h3>Total: ₹<span id="cart-total">0</span></h3>
+            <a href="index.html#about">
+                About
+            </a>
 
-        <p class="minimum-order">
-            Minimum Order Value: ₹199
+        </nav>
+
+
+        <a href="cart.html" class="cart-link">
+
+            🛒 Cart
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- CART -->
+
+    <main>
+
+        <section class="cart-page">
+
+            <div class="cart-header">
+
+                <p class="welcome-text">
+                    BIGMI FINDS
+                </p>
+
+                <h1>
+                    Your Cart 🛒
+                </h1>
+
+                <p>
+                    Review your little finds before checkout.
+                </p>
+
+            </div>
+
+
+            <div class="cart-container">
+
+
+                <!-- CART ITEMS -->
+
+                <div class="cart-items" id="cart-items">
+
+                    <!-- Products will be added here by JavaScript -->
+
+                </div>
+
+
+
+                <!-- EMPTY CART -->
+
+                <div class="empty-cart" id="empty-cart">
+
+                    <div class="empty-cart-icon">
+                        🛍️
+                    </div>
+
+                    <h2>
+                        Your cart is empty
+                    </h2>
+
+                    <p>
+                        Looks like you haven't added anything yet.
+                    </p>
+
+                    <a href="products.html" class="shop-button">
+                        Start Shopping
+                    </a>
+
+                </div>
+
+
+
+                <!-- CART SUMMARY -->
+
+                <div class="cart-summary" id="cart-summary">
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="cart-subtotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Shipping
+                        </span>
+
+                        <strong id="cart-shipping">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-line"></div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="cart-total">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <p class="minimum-order-message" id="minimum-order-message">
+                        Minimum order value is ₹199.
+                    </p>
+
+                    <p class="shipping-message" id="shipping-message">
+                        Add products to see shipping charges.
+                    </p>
+
+                    <a href="checkout.html" class="checkout-button" id="checkout-button">
+                         Proceed to Checkout →
+                    </a>
+
+
+                    <a href="products.html" class="continue-shopping">
+                        ← Continue Shopping
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <h3>
+                Bigmi Finds
+            </h3>
+
+            <p>
+                Little finds, big smiles. ♡
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="shipping.html">
+                Shipping
+            </a>
+
+            <a href="return.html">
+                Returns
+            </a>
+
+            <a href="terms.html">
+                Terms
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Bigmi Finds. All rights reserved.
         </p>
 
-        <button id="checkout-btn" onclick="window.location.href='checkout.html'">
-            Proceed to Checkout
-        </button>
+    </footer>
 
-    </div>
 
-</div>
+    <script src="script.js"></script>
 
-</section>
-
-<footer>
-
-<h2>BIGMI FINDS</h2>
-
-<p>Big Smiles in Mini Things 💖</p>
-
-<p>© 2026 Bigmi Finds. All Rights Reserved.</p>
-
-</footer>
-<script src="script.js"></script>
 </body>
 
 </html>
