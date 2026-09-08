@@ -1092,7 +1092,7 @@ function setupPaymentMethod() {
 
 
 /* =====================================================
-   FILE TO BASE64
+   FILE TO BASE64 - SMART IMAGE COMPRESSION
    ===================================================== */
 
 function fileToBase64(file) {
@@ -1105,18 +1105,144 @@ function fileToBase64(file) {
 
 
             reader.onload =
-                function() {
+                function(event) {
 
-                    const result =
-                        reader.result;
-
-
-                    const base64 =
-                        result.split(",")[1];
+                    const img =
+                        new Image();
 
 
-                    resolve(base64);
+                    img.onload =
+                        function() {
 
+                            try {
+
+                                /*
+                                   Maximum image dimensions.
+                                   Customer ko manually photo
+                                   compress/edit karne ki
+                                   zarurat nahi hogi.
+                                */
+
+                                const MAX_WIDTH = 1600;
+                                const MAX_HEIGHT = 1600;
+
+
+                                let width =
+                                    img.width;
+
+                                let height =
+                                    img.height;
+
+
+                                /*
+                                   Agar image already small hai,
+                                   to original dimensions rahengi.
+                                */
+
+                                if (
+                                    width > MAX_WIDTH ||
+                                    height > MAX_HEIGHT
+                                ) {
+
+                                    const ratio =
+                                        Math.min(
+                                            MAX_WIDTH / width,
+                                            MAX_HEIGHT / height
+                                        );
+
+
+                                    width =
+                                        Math.round(
+                                            width * ratio
+                                        );
+
+
+                                    height =
+                                        Math.round(
+                                            height * ratio
+                                        );
+                                }
+
+
+                                /*
+                                   Canvas ke through image
+                                   ko JPEG mein convert karenge.
+                                */
+
+                                const canvas =
+                                    document.createElement(
+                                        "canvas"
+                                    );
+
+
+                                canvas.width =
+                                    width;
+
+                                canvas.height =
+                                    height;
+
+
+                                const ctx =
+                                    canvas.getContext(
+                                        "2d"
+                                    );
+
+
+                                ctx.drawImage(
+                                    img,
+                                    0,
+                                    0,
+                                    width,
+                                    height
+                                );
+
+
+                                /*
+                                   75% JPEG quality.
+                                   Payment screenshot readable
+                                   rahega aur file size bhi
+                                   kaafi kam ho jayega.
+                                */
+
+                                const compressed =
+                                    canvas.toDataURL(
+                                        "image/jpeg",
+                                        0.75
+                                    );
+
+
+                                /*
+                                   Sirf Base64 part bhejna hai.
+                                */
+
+                                const base64 =
+                                    compressed.split(",")[1];
+
+
+                                resolve(base64);
+
+                            } catch (error) {
+
+                                reject(error);
+
+                            }
+                        };
+
+
+                    img.onerror =
+                        function() {
+
+                            reject(
+                                new Error(
+                                    "Unable to read the uploaded image."
+                                )
+                            );
+
+                        };
+
+
+                    img.src =
+                        event.target.result;
                 };
 
 
@@ -1133,7 +1259,6 @@ function fileToBase64(file) {
         }
     );
 }
-
 
 /* =====================================================
    SEND ORDER TO GOOGLE SHEET
@@ -1183,11 +1308,12 @@ async function sendOrderToGoogleSheet(
 
         } else {
 
-            alert(
-                "Something went wrong while placing your order. Please try again."
-            );
+    alert(
+        "Order Error: " +
+        (result.error || "Unknown error")
+    );
 
-        }
+}
 
     } catch (error) {
 
@@ -1680,3 +1806,5 @@ document.querySelectorAll(".category-item").forEach(categoryButton => {
     });
 
 });
+
+
