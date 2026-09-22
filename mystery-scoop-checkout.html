@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="images/logo.jpg">
+
+  <title>Mystery Scoop Checkout | Bigmi Finds</title>
+
+  <link rel="stylesheet" href="mystery-scoop-checkout.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="checkout-header">
+
+    <a href="mystery-scoop.html" class="back-link">
+      ← Mystery Scoop
+    </a>
+
+    <h1>✨ Mystery Scoop Checkout 🎀</h1>
+
+  </header>
+
+
+  <!-- =========================
+       MAIN CHECKOUT
+  ========================== -->
+
+  <main class="checkout-container">
+
+    <!-- CUSTOMER DETAILS -->
+
+    <section class="checkout-card">
+
+      <div class="section-number">01</div>
+
+      <h2>Your Details</h2>
+
+      <p class="section-subtitle">
+        Tell us where you'd like your Mystery Scoop delivered 💕
+      </p>
+
+
+      <div class="form-group">
+
+        <label for="full-name">
+          Full Name *
+        </label>
+
+        <input
+          type="text"
+          id="full-name"
+          placeholder="Enter your full name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="phone">
+            Phone Number *
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="address">
+          Delivery Address *
+        </label>
+
+        <textarea
+          id="address"
+          rows="4"
+          placeholder="House no., street, area..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="city">
+            City *
+          </label>
+
+          <input
+            type="text"
+            id="city"
+            placeholder="Your city"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="pin-code">
+            PIN Code *
+          </label>
+
+          <input
+            type="text"
+            id="pin-code"
+            maxlength="6"
+            placeholder="6-digit PIN"
+            required
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MYSTERY SCOOP SUMMARY
+    ========================== -->
+
+    <section class="checkout-card">
+
+      <div class="section-number">02</div>
+
+      <h2>Your Mystery Scoop</h2>
+
+      <p class="section-subtitle">
+        Here's what you've selected ✨
+      </p>
+
+
+      <div class="order-summary">
+
+        <div class="summary-row">
+
+          <span>Scoop Type</span>
+
+          <strong id="checkout-scoop">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+          <span>Size</span>
+
+          <strong id="checkout-size">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+          <span>Quantity</span>
+
+          <strong id="checkout-quantity">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+          <span>Color Preference</span>
+
+          <strong id="checkout-colors">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+          <span>Collaboration</span>
+
+          <strong id="checkout-collaboration">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="summary-row special-request-row">
+
+          <span>Special Request</span>
+
+          <strong id="checkout-request">
+            —
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PRICE SUMMARY
+    ========================== -->
+
+    <section class="checkout-card">
+
+      <div class="section-number">03</div>
+
+      <h2>Price Summary</h2>
+
+
+      <div class="price-summary">
+
+        <div class="price-row">
+
+          <span>Product Total</span>
+
+          <strong id="product-total">
+            ₹0
+          </strong>
+
+        </div>
+
+
+        <div class="price-row">
+
+          <span>Shipping</span>
+
+          <strong id="shipping-total">
+            ₹0
+          </strong>
+
+        </div>
+
+
+        <div class="price-divider"></div>
+
+
+        <div class="grand-total-row">
+
+          <span>Grand Total</span>
+
+          <strong id="grand-total">
+            ₹0
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAYMENT
+    ========================== -->
+
+    <section class="checkout-card">
+
+      <div class="section-number">04</div>
+
+      <h2>Payment</h2>
+
+      <p class="section-subtitle">
+        Choose your preferred payment method 💳
+      </p>
+
+
+      <div class="payment-options">
+
+        <label class="payment-option">
+
+          <input
+            type="radio"
+            name="payment"
+            value="cod"
+          >
+
+          <div>
+
+            <strong>Cash on Delivery</strong>
+
+            <small>
+              Pay when your Mystery Scoop arrives
+            </small>
+
+          </div>
+
+        </label>
+
+
+       <label class="payment-option">
+
+          <input
+    type="radio"
+    name="payment"
+    value="prepaid"
+  >
+
+  <div>
+    <strong>Prepaid Payment</strong>
+
+    <small>
+      Pay securely using UPI
+    </small>
+  </div>
+
+</label>
+
+<div id="prepaid-section">
+
+  <h3>💳 Prepaid Payment</h3>
+
+  <p>Scan the QR code using any UPI app.</p>
+
+  <img
+    src="images/upi-qr.jpeg"
+    alt="UPI QR Code"
+    class="upi-qr"
+  >
+
+
+  <div class="upi-id">
+    8917334400@ybl
+  </div>
+
+  <label
+    for="payment-screenshot"
+    class="screenshot-label"
+  >
+    Upload Payment Screenshot *
+  </label>
+
+  <input
+    type="file"
+    id="payment-screenshot"
+    accept="image/*"
+  >
+
+</div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PLACE ORDER
+    ========================== -->
+
+    <section class="checkout-card final-card">
+
+      <div class="final-message">
+        🎀 Almost there! Your Mystery Scoop is ready to be booked.
+      </div>
+
+
+      <button
+        type="button"
+        id="place-mystery-order"
+        class="place-order-button"
+      >
+        Place Mystery Scoop Order ✨
+      </button>
+
+
+      <p class="secure-note">
+        💕 Your order details will be used only for processing your booking.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <script src="mystery-scoop-checkout.js"></script>
+<!-- =========================
+     BIGMI FINDS FOOTER
+========================= -->
+
+<footer class="mystery-footer">
+
+  <p>
+    For queries, contact us at
+    <a href="mailto:bigmifinds@gmail.com">
+      bigmifinds@gmail.com
+    </a>
+  </p>
+
+  <p>
+    Instagram:
+    <a
+      href="https://www.instagram.com/bigmifinds"
+      target="_blank"
+      rel="noopener"
+    >
+      bigmifinds
+    </a>
+  </p>
+
+  <p class="footer-copy">
+    © 2026 Bigmi Finds. All rights reserved.
+  </p>
+
+</footer>
+</body>
+</html>

@@ -3911,3 +3911,236 @@ body {
         height: 220px;
     }
 }
+
+
+/* =========================================
+   MYSTERY SCOOP — ALL CATEGORY CARD
+========================================= */
+
+.mystery-scoop-feature {
+  width: min(900px, 92%);
+  margin: 25px auto;
+
+  background: linear-gradient(135deg, #fff8fb, #fff);
+
+  border: 1px solid #f0e1e8;
+  border-radius: 22px;
+
+  padding: 18px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(70, 40, 60, 0.06);
+}
+
+.mystery-scoop-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/* IMAGE AREA */
+
+.mystery-scoop-image {
+  min-height: 260px;
+
+  border-radius: 17px;
+
+  background:
+    radial-gradient(
+      circle at 25% 25%,
+      #ffeaf3 0 12%,
+      transparent 13%
+    ),
+    radial-gradient(
+      circle at 75% 70%,
+      #f2e8ff 0 13%,
+      transparent 14%
+    ),
+    linear-gradient(145deg, #fff4f8, #f9f3ff);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #e6d6df;
+}
+
+
+/* TEMPORARY PLACEHOLDER */
+
+.mystery-placeholder {
+  text-align: center;
+}
+
+.mystery-placeholder span {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 7px;
+}
+
+.mystery-placeholder small {
+  color: #8b7d86;
+  font-size: 11px;
+}
+
+
+/* CONTENT */
+
+.mystery-scoop-content {
+  padding: 5px 10px 5px 0;
+}
+
+.mystery-badge {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  background: #fff0f6;
+  color: #bd638b;
+
+  border-radius: 30px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+
+.mystery-scoop-content h2 {
+  margin: 12px 0 5px;
+
+  color: #3f3740;
+
+  font-size: 27px;
+  font-weight: 600;
+}
+
+
+.mystery-tagline {
+  color: #bd638b;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  margin-bottom: 10px;
+}
+
+
+.mystery-description {
+  max-width: 360px;
+
+  color: #8b7d86;
+
+  font-size: 11px;
+  line-height: 1.7;
+
+  margin-bottom: 18px;
+}
+
+
+/* BUTTON */
+
+.mystery-scoop-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 17px;
+
+  background: #d979a5;
+  color: white;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.mystery-scoop-button:hover {
+  background: #bd5f8c;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .mystery-scoop-feature {
+    width: 94%;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    padding: 14px;
+  }
+
+  .mystery-scoop-image {
+    min-height: 220px;
+  }
+
+  .mystery-scoop-content {
+    padding: 2px 4px 7px;
+  }
+
+  .mystery-scoop-content h2 {
+    font-size: 23px;
+  }
+
+  .mystery-description {
+    max-width: none;
+  }
+
+  .mystery-scoop-button {
+    width: 100%;
+  }
+
+}
+.mystery-scoop-image {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.mystery-scoop-image .mystery-placeholder {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.mystery-scoop-image .mystery-placeholder img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 700px) {
+
+  .mystery-scoop-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .mystery-scoop-image {
+    min-height: 300px;
+  }
+
+}

@@ -1,0 +1,502 @@
+/* =========================================
+   BIGMI FINDS — MYSTERY SCOOP CHECKOUT
+========================================= */
+
+:root {
+  --text: #3f3740;
+  --muted: #8a7f88;
+  --border: #eee5eb;
+  --soft: #fff8fb;
+  --white: #ffffff;
+  --accent: #d979a5;
+  --accent-dark: #bd5f8c;
+  --success: #6d9b78;
+  --shadow: 0 10px 35px rgba(80, 50, 70, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #fffafd 0%, #ffffff 100%);
+  color: var(--text);
+  font-size: 14px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.checkout-header {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 22px 20px 16px;
+  text-align: center;
+}
+
+.checkout-header h1 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.back-link {
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.back-link:hover {
+  color: var(--accent-dark);
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.checkout-container {
+  width: min(850px, calc(100% - 30px));
+  margin: 12px auto 50px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.checkout-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+
+.checkout-card h2 {
+  margin: 0 0 5px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.section-number {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding: 11px 13px;
+  background: #fff;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 95px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b7adb5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #e2a4bf;
+  box-shadow: 0 0 0 3px rgba(217, 121, 165, 0.08);
+}
+
+
+/* =========================
+   ORDER SUMMARY
+========================= */
+
+.order-summary {
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.summary-row strong {
+  max-width: 60%;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.special-request-row {
+  align-items: flex-start;
+}
+
+
+/* =========================
+   PRICE SUMMARY
+========================= */
+
+.price-summary {
+  background: var(--soft);
+  border-radius: 13px;
+  padding: 15px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  font-size: 13px;
+}
+
+.price-row span {
+  color: var(--muted);
+}
+
+.price-row strong {
+  font-weight: 600;
+}
+
+.price-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
+}
+
+.grand-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 7px;
+}
+
+.grand-total-row span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.grand-total-row strong {
+  color: var(--accent-dark);
+  font-size: 18px;
+}
+
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  background: #fff;
+}
+
+.payment-option:hover {
+  border-color: #e3aec5;
+  background: #fffafd;
+}
+
+.payment-option input {
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+
+.payment-option strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.payment-option small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   PREPAID AREA
+   Hidden until selected
+========================= */
+
+#prepaid-section {
+  display: none;
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px dashed #e5b4c9;
+  border-radius: 14px;
+  background: #fff9fc;
+  text-align: center;
+}
+
+#prepaid-section h3 {
+  margin: 0 0 7px;
+  font-size: 15px;
+}
+
+#prepaid-section p {
+  margin: 5px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.upi-qr {
+  width: 180px;
+  max-width: 100%;
+  margin: 14px auto 10px;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.upi-id {
+  display: inline-block;
+  margin: 4px 0 15px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.screenshot-label {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+#payment-screenshot {
+  width: 100%;
+  margin-top: 7px;
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #fff;
+  font-size: 12px;
+}
+
+
+/* =========================
+   COD NOTICE
+========================= */
+
+.cod-note {
+  display: none;
+  margin-top: 12px;
+  padding: 11px 13px;
+  border-radius: 10px;
+  background: #f5faf6;
+  color: var(--success);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   FINAL CARD
+========================= */
+
+.final-card {
+  text-align: center;
+  padding: 25px;
+}
+
+.final-message {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.place-order-button {
+  width: 100%;
+  border: none;
+  border-radius: 13px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 8px 20px rgba(189, 95, 140, 0.18);
+}
+
+.place-order-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(189, 95, 140, 0.22);
+}
+
+.secure-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  body {
+    font-size: 13px;
+  }
+
+  .checkout-header {
+    padding: 20px 15px 15px;
+  }
+
+  .checkout-header h1 {
+    font-size: 18px;
+  }
+
+  .back-link {
+    position: static;
+    display: block;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  .checkout-container {
+    width: calc(100% - 20px);
+    margin-top: 8px;
+  }
+
+  .checkout-card {
+    padding: 19px;
+    border-radius: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .summary-row {
+    padding: 12px;
+  }
+
+  .summary-row strong {
+    max-width: 55%;
+  }
+
+  .upi-qr {
+    width: 160px;
+  }
+
+}
+
+/* =========================
+   BIGMI FINDS FOOTER
+========================= */
+
+.mystery-footer {
+  text-align: center;
+  padding: 25px 15px 30px;
+  color: #8a7f88;
+  font-size: 11px;
+}
+
+.mystery-footer p {
+  margin: 6px 0;
+}
+
+.mystery-footer a {
+  color: #bd5f8c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mystery-footer a:hover {
+  text-decoration: underline;
+}
+
+.mystery-footer .footer-copy {
+  margin-top: 14px;
+  font-size: 10px;
+  color: #aaa1a8;
+}

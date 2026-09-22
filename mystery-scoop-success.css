@@ -1,0 +1,159 @@
+/* =========================================
+   BIGMI FINDS — MYSTERY SCOOP SUCCESS
+========================================= */
+
+:root {
+  --text: #3f3740;
+  --muted: #8a7f88;
+  --border: #eee5eb;
+  --white: #ffffff;
+  --accent: #d979a5;
+  --accent-dark: #bd5f8c;
+  --soft: #fff8fb;
+  --shadow: 0 12px 40px rgba(80, 50, 70, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    180deg,
+    #fffafd 0%,
+    #ffffff 100%
+  );
+  color: var(--text);
+}
+
+.success-container {
+  width: min(560px, calc(100% - 30px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.success-card {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--soft);
+  font-size: 28px;
+}
+
+.success-card h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.success-message {
+  margin: 0 auto 20px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.success-info {
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 13px;
+  background: var(--soft);
+}
+
+.success-info p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.home-button {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 13px;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-dark)
+  );
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(189, 95, 140, 0.18);
+  transition: 0.2s ease;
+}
+
+.home-button:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+
+  .success-container {
+    width: calc(100% - 20px);
+  }
+
+  .success-card {
+    padding: 32px 20px;
+    border-radius: 18px;
+  }
+
+  .success-card h1 {
+    font-size: 21px;
+  }
+
+}
+
+/* =========================
+   BIGMI FINDS FOOTER
+========================= */
+
+.mystery-footer {
+  text-align: center;
+  padding: 25px 15px 30px;
+  color: #8a7f88;
+  font-size: 11px;
+}
+
+.mystery-footer p {
+  margin: 6px 0;
+}
+
+.mystery-footer a {
+  color: #bd5f8c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mystery-footer a:hover {
+  text-decoration: underline;
+}
+
+.mystery-footer .footer-copy {
+  margin-top: 14px;
+  font-size: 10px;
+  color: #aaa1a8;
+}

@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="images/logo.jpg">
+
+  <title>Mystery Scoop | Bigmi Finds</title>
+
+  <meta
+    name="description"
+    content="Pick your Mystery Scoop size and type at Bigmi Finds. A cute surprise filled with accessories and stationery."
+  >
+
+  <link rel="stylesheet" href="mystery-scoop.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="mystery-header">
+    <a href="index.html" class="back-link">← Bigmi Finds</a>
+
+    <div class="header-title">
+      <span>✨</span>
+      <h1>Mystery Scoop</h1>
+      <span>🎀</span>
+    </div>
+
+    <div class="header-space"></div>
+  </header>
+
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+  <main class="mystery-container">
+
+    <!-- Hero / Image -->
+    <section class="mystery-hero">
+
+      <div class="scoop-placeholder">
+        <div class="mystery-details-image">
+        <img
+             src="images/card-scoop.png"
+             alt="Bigmi Finds Mystery Scoop Details"
+        >
+</div>
+
+      <div class="hero-text">
+        <span class="small-label">A LITTLE SURPRISE FOR YOU</span>
+
+        <h2>Pick your scoop.<br>Discover your surprise. 💕</h2>
+
+        <p>
+          Choose your scoop type and size, tell us your color preference,
+          and let us create a little mystery just for you.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCOOP TYPE
+    ========================== -->
+    <section class="form-section">
+
+      <div class="section-heading">
+        <span class="step-number">01</span>
+
+        <div>
+          <h3>Choose Your Scoop</h3>
+          <p>What kind of surprise would you like?</p>
+        </div>
+      </div>
+
+
+      <div class="option-grid scoop-type-grid">
+
+        <label class="option-card">
+          <input type="radio" name="scoop-type" value="mix">
+
+          <div class="option-content">
+            <span class="option-emoji">✨</span>
+
+            <div>
+              <strong>Mix</strong>
+              <small>Accessories + Stationery</small>
+            </div>
+          </div>
+
+          <span class="check-mark">✓</span>
+        </label>
+
+
+        <label class="option-card">
+          <input type="radio" name="scoop-type" value="accessories">
+
+          <div class="option-content">
+            <span class="option-emoji">🎀</span>
+
+            <div>
+              <strong>Accessories</strong>
+              <small>Fun & cute accessories</small>
+            </div>
+          </div>
+
+          <span class="check-mark">✓</span>
+        </label>
+
+
+        <label class="option-card">
+          <input type="radio" name="scoop-type" value="stationery">
+
+          <div class="option-content">
+            <span class="option-emoji">📚</span>
+
+            <div>
+              <strong>Stationery</strong>
+              <small>Cute stationery surprises</small>
+            </div>
+          </div>
+
+          <span class="check-mark">✓</span>
+        </label>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SIZE
+    ========================== -->
+    <section class="form-section">
+
+      <div class="section-heading">
+        <span class="step-number">02</span>
+
+        <div>
+          <h3>Choose Your Size</h3>
+          <p>Pick the scoop that feels right for you.</p>
+        </div>
+      </div>
+
+
+      <div class="size-grid">
+
+        <label class="size-card">
+          <input type="radio" name="scoop-size" value="mini">
+
+          <div class="size-top">
+            <span class="size-name">Mini Scoop</span>
+            <span class="size-emoji">🩷</span>
+          </div>
+          <p>
+             3–4 Mystery Items + 2 Free Items
+          </p>
+
+          <strong class="price">₹299</strong>
+
+          <span class="shipping">+ ₹29 shipping</span>
+
+          <span class="size-description">
+            A tiny surprise to brighten your day.
+          </span>
+
+          <span class="check-mark">✓</span>
+        </label>
+
+
+        <label class="size-card">
+          <input type="radio" name="scoop-size" value="medium">
+
+          <div class="size-top">
+            <span class="size-name">Medium Scoop</span>
+            <span class="size-emoji">💜</span>
+          </div>
+          <p>
+             6–7 Mystery Items + 4 Free Items
+          </p>
+
+          <strong class="price">₹499</strong>
+
+          <span class="shipping free">FREE SHIPPING</span>
+
+          <span class="size-description">
+            A little more mystery, a little more fun.
+          </span>
+
+          <span class="check-mark">✓</span>
+        </label>
+
+
+        <label class="size-card">
+          <input type="radio" name="scoop-size" value="large">
+
+          <div class="size-top">
+            <span class="size-name">Large Scoop</span>
+            <span class="size-emoji">💙</span>
+          </div>
+          <p>
+             11–12 Mystery Items + 6 Free Items
+          </p>
+
+          <strong class="price">₹699</strong>
+
+          <span class="shipping free">FREE SHIPPING</span>
+
+          <span class="size-description">
+            Go big on the surprise! ✨
+          </span>
+
+          <span class="check-mark">✓</span>
+        </label>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUANTITY
+    ========================== -->
+    <section class="form-section small-section">
+
+      <div class="section-heading">
+        <span class="step-number">03</span>
+
+        <div>
+          <h3>Quantity</h3>
+          <p>How many Mystery Scoops?</p>
+        </div>
+      </div>
+
+
+      <div class="quantity-box">
+
+        <button type="button" id="decrease-qty">−</button>
+
+        <span id="quantity">1</span>
+
+        <button type="button" id="increase-qty">+</button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         COLOR PREFERENCE
+    ========================== -->
+    <section class="form-section">
+
+      <div class="section-heading">
+        <span class="step-number">04</span>
+
+        <div>
+          <h3>Color Preference 🎨</h3>
+          <p>We'll try our best to match your vibe.</p>
+        </div>
+      </div>
+
+
+      <div class="input-card">
+
+        <label for="color-preference">
+          Your preferred colors
+        </label>
+
+        <textarea
+          id="color-preference"
+          rows="3"
+          maxlength="200"
+          placeholder="Mention 2–3 colors you like, e.g. Pink, Purple, Blue..."
+        ></textarea>
+
+        <span class="input-note">
+          Preferences are not guaranteed, but we'll do our best. 💕
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SPECIAL REQUEST
+    ========================== -->
+    <section class="form-section">
+
+      <div class="section-heading">
+        <span class="step-number">05</span>
+
+        <div>
+          <h3>Anything You'd Like Us to Do? 💌</h3>
+          <p>Optional — tell us anything you'd like us to know.</p>
+        </div>
+      </div>
+
+
+      <div class="input-card">
+
+        <textarea
+          id="special-request"
+          rows="4"
+          maxlength="500"
+          placeholder="Any little request, idea or note? You can mention it here..."
+        ></textarea>
+
+        <span class="input-note">
+          We'll consider your request based on availability.
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         COLLABORATION
+    ========================== -->
+    <section class="form-section">
+
+      <div class="section-heading">
+        <span class="step-number">06</span>
+
+        <div>
+          <h3>Let's Create Together 🎥</h3>
+          <p>Would you like to collaborate on your Mystery Scoop video?</p>
+        </div>
+      </div>
+
+
+      <div class="collaboration-options">
+
+        <label class="collab-option">
+          <input type="radio" name="collaboration" value="yes">
+
+          <span class="collab-icon">💕</span>
+
+          <div>
+            <strong>Yes, I'd love to!</strong>
+            <small>Let's create something cute together.</small>
+          </div>
+
+          <span class="check-mark">✓</span>
+        </label>
+
+
+        <label class="collab-option">
+          <input type="radio" name="collaboration" value="no">
+
+          <span class="collab-icon">😊</span>
+
+          <div>
+            <strong>No, thank you</strong>
+            <small>Just send me my mystery surprise.</small>
+          </div>
+
+          <span class="check-mark">✓</span>
+        </label>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         IMPORTANT NOTE
+    ========================== -->
+    <section class="important-note">
+
+      <div class="note-icon">♡</div>
+
+      <div>
+        <h3>A Little Note Before You Book</h3>
+
+        <p>
+          Product will be randomly selected according to your chosen scoop
+          type and size. Color and design will be random and cannot be
+          guaranteed.
+        </p>
+
+        <p>
+          You can mention your color preference and we will try our best
+          to match it. Exact products shown in the scoop may vary depending
+          on availability.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BOOKING SUMMARY
+    ========================== -->
+    <section class="booking-box">
+
+      <div class="booking-summary">
+
+        <div>
+          <span>Scoop</span>
+          <strong id="summary-scoop">Not selected</strong>
+        </div>
+
+        <div>
+          <span>Size</span>
+          <strong id="summary-size">Not selected</strong>
+        </div>
+
+        <div>
+          <span>Quantity</span>
+          <strong id="summary-quantity">1</strong>
+        </div>
+
+      </div>
+
+
+      <div class="total-row">
+
+        <span>Total</span>
+
+        <strong id="total-price">—</strong>
+
+      </div>
+
+
+      <button type="button" class="book-button" id="book-scoop">
+        Book Your Mystery Scoop ✨
+      </button>
+
+      <p class="secure-note">
+        Your details will be collected on the next step.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       SCRIPT
+  ========================== -->
+  <script src="mystery-scoop.js"></script>
+<!-- =========================
+     BIGMI FINDS FOOTER
+========================= -->
+
+<footer class="mystery-footer">
+
+  <p>
+    For queries, contact us at
+    <a href="mailto:bigmifinds@gmail.com">
+      bigmifinds@gmail.com
+    </a>
+  </p>
+
+  <p>
+    Instagram:
+    <a
+      href="https://www.instagram.com/bigmifinds"
+      target="_blank"
+      rel="noopener"
+    >
+      bigmifinds
+    </a>
+  </p>
+
+  <p class="footer-copy">
+    © 2026 Bigmi Finds. All rights reserved.
+  </p>
+
+</footer>
+</body>
+</html>
